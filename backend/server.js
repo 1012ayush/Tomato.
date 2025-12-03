@@ -1,3 +1,4 @@
+
 import express, { application } from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
@@ -11,7 +12,7 @@ import orderRouter from "./routes/orderRoute.js"
 
 // app config
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000;
 
 
 //middleware
