@@ -6,7 +6,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const placeOrder = async (req, res) => {
-    const frontend_url = "https://tomato-frontend-05oc.onrender.com";
+    const frontend_url = process.env.FRONTEND_URL || "http://localhost:3000";
 
     try {
         // Save order
